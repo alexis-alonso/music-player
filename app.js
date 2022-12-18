@@ -15,7 +15,7 @@ const recentVolume = document.querySelector('.volume');
 const volumeShow = document.querySelector('.volume-show');
 
 // song titles
-const songs = ['ricco-harbor', 'trigger-happy-havoc', 'cornered', 'courtroom', 'objection-2001', 'jfa-court'];
+const songs = ['ricco-harbor', 'trigger-happy-havoc', 'courtroom'];
 
 // keep track of songs
 let songIndex = 1;
@@ -90,18 +90,18 @@ function setProgress(e) {
     audio.currentTime = (clickX / width) * duration;
 }
 
-function volumeChange() {
-    volumeShow.innerHTML = recentVolume.value;
-    let audio = songs[songIndex];
-    audio.volume = recentVolume.value / 100;
-}
+// function volumeChange() {
+//     volumeShow.innerHTML = recentVolume.value;
+//     let audio = songs[songIndex];
+//     audio.volume = recentVolume.value / 100;
+// }
 
-function muteSound() {
-    audio.volume = 0;
-	volume.value = 0;
-	volumeShow.innerHTML = 0;
+// function muteSound() {
+//     audio.volume = 0;
+// 	volume.value = 0;
+// 	volumeShow.innerHTML = 0;
 
-}
+// }
 
 // event listeners
 play.addEventListener('click', () => {
