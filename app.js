@@ -33,6 +33,7 @@ function loadSong(song) {
 
 function playSong() {
     musicContainer.classList.add('play');
+    play.innerText = 'Pause';
     // add icons class for the pause button, ready to be pressed if song already playing
     // play.querySelector().classList.remove(play icon);
     // play.querySelector().classList.add(pause icon);
@@ -42,6 +43,7 @@ function playSong() {
 
 function pauseSong() {
     musicContainer.classList.remove('play');
+    play.innerText = 'Play';
     // add icons class for the play button, ready to be pressed if song is not playing
     // play.querySelector().classList.add(play icon);
     // play.querySelector().classList.remove(pause icon);
