@@ -11,8 +11,6 @@ const previous = document.querySelector('#previous');
 const play = document.querySelector('#play');
 const forward = document.querySelector('#forward');
 
-const recentVolume = document.querySelector('.volume');
-const volumeShow = document.querySelector('.volume-show');
 
 // song titles
 const songs = ['ricco-harbor', 'trigger-happy-havoc', 'courtroom'];
@@ -98,12 +96,15 @@ function setProgress(e) {
 //     audio.volume = recentVolume.value / 100;
 // }
 
-// function muteSound() {
-//     audio.volume = 0;
-// 	volume.value = 0;
-// 	volumeShow.innerHTML = 0;
-
-// }
+function muteSound() {
+    if (audio.muted === false) {
+        audio.muted = true;
+    }
+    
+    else {
+        audio.muted = false;
+    }
+}
 
 // event listeners
 play.addEventListener('click', () => {
